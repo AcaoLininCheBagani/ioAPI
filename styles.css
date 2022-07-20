@@ -1,0 +1,114 @@
+body {
+  background-color: gray;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  height: 150px;
+  width: 600px;
+  margin: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 3rem;
+  transform: ease transform 0.5s;
+  transform: scale(0.7);
+}
+
+.transform {
+  transform: scale(1);
+}
+
+.add-button {
+  width: 400px;
+  height: 100px;
+  margin: 20px;
+  padding-top: 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  transform: translate(30%, -30%);
+  display: none;
+}
+
+
+.image-container {
+  position: absolute;
+  top: 140%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.image-div {
+  background-color: #fff;
+  height: 500px;
+  width: 700px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #444;
+}
+
+.popup-button {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 50px;
+  background-color: #444;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+@keyframes birdAnimation {
+  0% {
+    padding-right: 100px;
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  100% {
+    padding-right: 0px;
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes textAnimation {
+  0% {
+    padding-left: 100px;
+    opacity: 0;
+  }
+
+  100% {
+    padding-left: 0px;
+    opacity: 1;
+  }
+}
+
+.image-png {
+  /* animation-name: birdAnimation;
+  animation-duration: 2.5s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1; */
+  animation: birdAnimation 2.5s ease infinite;
+}
+
+.text-div {
+  animation: textAnimation 2.5s ease 1;
+}
+
+.show-container {
+  display: block;
+}
